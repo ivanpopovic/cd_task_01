@@ -1,0 +1,13 @@
+resources:
+  - name: git-repository
+    type: git
+    source:
+      uri: "https://github.com/ivanpopovic/cd_task_01.git"
+
+jobs:
+- name: commit-stage
+  plan:
+  - get: git-repository
+    trigger: true
+  - task: run-tests
+    file: git-repository/ci/commit_build.yml
