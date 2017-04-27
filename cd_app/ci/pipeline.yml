@@ -10,4 +10,4 @@ jobs:
   - get: git-repository
     trigger: true
   - task: run-tests
-    file: git-repository/ci/commit_build.yml
+    file: git-repository/cd_app/ci/commit_build.yml
