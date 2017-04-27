@@ -2,7 +2,7 @@
 
 set -e -x
 
-pushd cd_app
+pushd git-repository
   bundle install
   rspec
   brakeman
